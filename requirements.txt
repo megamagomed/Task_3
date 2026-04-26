@@ -1,0 +1,6 @@
+allure-pytest
+Faker
+pytest
+requests
+seletools
+selenium

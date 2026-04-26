@@ -1,9 +1,6 @@
 import allure
 
-from test_data.urls import Urls
-from test_data.user_data import UserData
-from pages.recover_password_page import RecoveryPasswordPage
-from pages.main_page import MainPage
+from urls.urls import Urls
 
 
 class TestRecoveryPassword:
@@ -36,7 +33,6 @@ class TestRecoveryPassword:
         recovery_password_page.click_password_reset_link()
         recovery_password_page.set_email_for_reset_password(user_data["email"])
         recovery_password_page.click_reset_button()
-        # recovery_password_page.set_password_for_reset_password(UserData.user_password)
         recovery_password_page.click_on_show_password_button()
 
         assert recovery_password_page.find_input_active()

@@ -17,7 +17,6 @@ class LoginUserPage(BasePage):
 
     @allure.step("Нажимаем кнопку «Войти»")
     def click_login_button(self):
-        self.wait_element_invisible(MainPageLocators.OVERLAY)
-        self.click_to_element_js(UserLoginPageLocators.LOGIN_BUTTON)
+        self.click_safe(UserLoginPageLocators.LOGIN_BUTTON)
         self.wait_element_invisible(MainPageLocators.MODAL_OPENED)
         
